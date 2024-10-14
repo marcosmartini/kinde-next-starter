@@ -72,13 +72,24 @@ export default function Home() {
                             </span>
                             .
                           </li>
-                          <li>
-                            <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
-                              https://*<strong>[your-vercel-slug]</strong>
-                              .vercel.com/api/auth/kinde_callback
-                            </span>
-                            .
-                          </li>
+                          {process.env.VERCEL && (
+                            <>
+                              <li>
+                                <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
+                                  https://*<strong>[your-vercel-slug]</strong>
+                                  .vercel.com/api/auth/kinde_callback
+                                </span>
+                                .
+                              </li>
+                              <li>
+                                <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
+                                  https://{process.env.VERCEL_PROJECT_PRODUCTION_URL}
+                                  /api/auth/kinde_callback
+                                </span>
+                                .
+                              </li>
+                            </>
+                          )}
                         </ul>
                       </li>
                       <li>
@@ -90,12 +101,23 @@ export default function Home() {
                             </span>
                             .
                           </li>
-                          <li>
-                            <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
-                              https://*<strong>[your-vercel-slug]</strong>.vercel.com
-                            </span>
-                            .
-                          </li>
+                          {process.env.VERCEL && (
+                            <>
+                              <li>
+                                <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
+                                  https://*<strong>[your-vercel-slug]</strong>
+                                  .vercel.com
+                                </span>
+                                .
+                              </li>
+                              <li>
+                                <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
+                                  https://{process.env.VERCEL_PROJECT_PRODUCTION_URL}
+                                </span>
+                                .
+                              </li>
+                            </>
+                          )}
                         </ul>
                       </li>
                     </ul>
