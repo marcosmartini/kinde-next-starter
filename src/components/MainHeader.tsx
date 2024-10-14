@@ -33,7 +33,9 @@ export default async function Header({ showNav = true }: HeaderProps) {
         <nav>
           <ul>
             {(await isAuthenticated()) ? (
-              <LogoutLink>Log out</LogoutLink>
+              <li>
+                <LogoutLink>Log out</LogoutLink>
+              </li>
             ) : (
               <>
                 <li>
