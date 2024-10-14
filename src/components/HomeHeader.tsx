@@ -11,7 +11,7 @@ export default async function HomeHeader() {
       <div className="flex items-center gap-4">
         <a
           target="_blank"
-          href="https://github.com/vercel/nextjs-ai-chatbot/"
+          href="#"
           rel="noopener noreferrer"
           className="focus-visible:ring-ring border-input hover:bg-accent hover:text-accent-foreground inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md border bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50"
         >
@@ -28,7 +28,7 @@ export default async function HomeHeader() {
           <span className="ml-2 hidden md:flex">GitHub</span>
         </a>
         <a
-          href="https://vercel.com/templates/Next.js/nextjs-ai-chatbot"
+          href="#"
           target="_blank"
           className="focus-visible:ring-ring text-primary-foreground inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md bg-black px-4 py-2 text-sm font-medium text-white shadow transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50"
         >
