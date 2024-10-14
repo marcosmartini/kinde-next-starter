@@ -59,7 +59,7 @@ export default async function Dashboard() {
         {(await isAuthenticated()) && (
           <>
             <div className="mx-auto flex w-full max-w-2xl flex-col gap-6">
-              <pre className="rounded-xl border border-slate-100 bg-white p-8 text-sm">
+              <pre className="overflow-x-auto rounded-xl border border-slate-100 bg-white p-8 text-sm">
                 <code>{JSON.stringify(user, null, 2)}</code>
               </pre>
             </div>
