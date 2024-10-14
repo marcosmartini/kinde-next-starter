@@ -11,7 +11,6 @@ export default function Home() {
             <h2 className="mx-auto inline rounded bg-purple-100 px-2 py-1 text-center text-sm text-purple-700">
               First things first
             </h2>
-            <div>{process.env.VERCEL_ENV}</div>
           </div>
           <ol className="grid grid-cols-1 gap-6">
             <li className="step-card">
@@ -63,11 +62,14 @@ export default function Home() {
                   </li>
                   <li>
                     Add your <strong>callback URLs</strong> in the relevant fields. For example:
-                    <ul className="my-4 ms-5 mt-2 list-inside list-disc space-y-2">
+                    <ul className="my-4 ms-5 mt-3 list-inside list-disc space-y-2">
                       <li>
                         <strong>Allowed callback URLs</strong> (also known as redirect URIs)
                         <ul className="my-2 ml-6 list-inside list-[circle] space-y-2">
                           <li>
+                            <span className="font-sm leading-1 mr-1 inline-flex items-center rounded border border-slate-200 bg-slate-50 px-2 py-1 text-center font-mono text-xs uppercase">
+                              Local
+                            </span>
                             <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
                               http://localhost:3000/api/auth/kinde_callback
                             </span>
@@ -76,6 +78,9 @@ export default function Home() {
                           {process.env.VERCEL && (
                             <>
                               <li>
+                                <span className="font-sm leading-1 mr-1 inline-flex items-center rounded border border-slate-200 bg-slate-50 px-2 py-1 text-center font-mono text-xs uppercase">
+                                  Preview
+                                </span>
                                 <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
                                   https://*<strong>[your-vercel-slug]</strong>
                                   .vercel.com/api/auth/kinde_callback
@@ -83,6 +88,9 @@ export default function Home() {
                                 .
                               </li>
                               <li>
+                                <span className="font-sm leading-1 mr-1 inline-flex items-center rounded border border-slate-200 bg-slate-50 px-2 py-1 text-center font-mono text-xs uppercase">
+                                  Prod
+                                </span>
                                 <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
                                   https://{process.env.VERCEL_PROJECT_PRODUCTION_URL}
                                   /api/auth/kinde_callback
@@ -97,6 +105,9 @@ export default function Home() {
                         <strong>Allowed logout redirect URLs</strong> - for example:
                         <ul className="my-2 ml-6 list-inside list-[circle] space-y-2">
                           <li>
+                            <span className="font-sm leading-1 mr-1 inline-flex items-center rounded border border-slate-200 bg-slate-50 px-2 py-1 text-center font-mono text-xs uppercase">
+                              Local
+                            </span>
                             <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
                               http://localhost:3000
                             </span>
@@ -105,6 +116,9 @@ export default function Home() {
                           {process.env.VERCEL && (
                             <>
                               <li>
+                                <span className="font-sm leading-1 mr-1 inline-flex items-center rounded border border-slate-200 bg-slate-50 px-2 py-1 text-center font-mono text-xs uppercase">
+                                  Preview
+                                </span>
                                 <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
                                   https://*<strong>[your-vercel-slug]</strong>
                                   .vercel.com
@@ -112,6 +126,9 @@ export default function Home() {
                                 .
                               </li>
                               <li>
+                                <span className="font-sm leading-1 mr-1 inline-flex items-center rounded border border-slate-200 bg-slate-50 px-2 py-1 text-center font-mono text-xs uppercase">
+                                  Prod
+                                </span>
                                 <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
                                   https://{process.env.VERCEL_PROJECT_PRODUCTION_URL}
                                 </span>
