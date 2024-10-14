@@ -2,13 +2,9 @@ import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components
 
 export default function Home() {
   return (
-    <main className="mx-auto grid h-full max-w-2xl place-items-center px-4 py-20 md:px-8">
+    <main className="mx-auto grid h-full max-w-3xl place-items-center px-4 py-20 md:px-8">
       <div className="grid place-items-center gap-20">
         <h1 className="max-w-[12ch] text-center">Auth for modern applications</h1>
-
-        <pre className="text-wrap text-sm leading-loose" style={{ overflowWrap: "anywhere" }}>
-          <code>{JSON.stringify(process.env, null, 2)}</code>
-        </pre>
 
         <section className="pb-20">
           <div className="mb-6 flex items-center">
@@ -66,21 +62,41 @@ export default function Home() {
                   </li>
                   <li>
                     Add your <strong>callback URLs</strong> in the relevant fields. For example:
-                    <ul className="my-4 ms-5 list-inside list-[circle] space-y-2">
+                    <ul className="my-4 ms-5 mt-2 list-inside list-disc space-y-2">
                       <li>
-                        <strong>Allowed callback URLs</strong> (also known as redirect URIs) - for
-                        example{" "}
-                        <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
-                          http://localhost:3000/api/auth/kinde_callback
-                        </span>
-                        .
+                        <strong>Allowed callback URLs</strong> (also known as redirect URIs)
+                        <ul className="my-2 ml-6 list-inside list-[circle] space-y-2">
+                          <li>
+                            <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
+                              http://localhost:3000/api/auth/kinde_callback
+                            </span>
+                            .
+                          </li>
+                          <li>
+                            <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
+                              https://*<strong>[your-vercel-slug]</strong>
+                              .vercel.com/api/auth/kinde_callback
+                            </span>
+                            .
+                          </li>
+                        </ul>
                       </li>
                       <li>
-                        <strong>Allowed logout redirect URLs</strong> - for example{" "}
-                        <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
-                          http://localhost:3000
-                        </span>
-                        .
+                        <strong>Allowed logout redirect URLs</strong> - for example:
+                        <ul className="my-2 ml-6 list-inside list-[circle] space-y-2">
+                          <li>
+                            <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
+                              http://localhost:3000
+                            </span>
+                            .
+                          </li>
+                          <li>
+                            <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
+                              https://*<strong>[your-vercel-slug]</strong>.vercel.com
+                            </span>
+                            .
+                          </li>
+                        </ul>
                       </li>
                     </ul>
                   </li>
