@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/components/MainHeader";
 
 export default async function HomeHeader() {
   return <Header showNav={false} />;
