@@ -11,6 +11,7 @@ export default function Home() {
             <h2 className="mx-auto inline rounded bg-purple-100 px-2 py-1 text-center text-sm text-purple-700">
               First things first
             </h2>
+            <div>{process.env.VERCEL_ENV}</div>
           </div>
           <ol className="grid grid-cols-1 gap-6">
             <li className="step-card">
