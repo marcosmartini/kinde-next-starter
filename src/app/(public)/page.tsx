@@ -1,5 +1,4 @@
 import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
-import CopyURLs from "@/components/CopyURLs";
 
 export default function Home() {
   return (
