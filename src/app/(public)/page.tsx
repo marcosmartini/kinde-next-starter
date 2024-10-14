@@ -1,11 +1,11 @@
 import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
+import CopyURLs from "@/components/CopyURLs";
 
 export default function Home() {
   return (
     <main className="mx-auto grid h-full max-w-3xl place-items-center px-4 py-20 md:px-8">
       <div className="grid place-items-center gap-20">
         <h1 className="max-w-[12ch] text-center">Auth for modern applications</h1>
-
         <section className="pb-20">
           <div className="mb-6 flex items-center">
             <h2 className="mx-auto inline rounded bg-purple-100 px-2 py-1 text-center text-sm text-purple-700">
@@ -55,85 +55,43 @@ export default function Home() {
                   </span>
                   Set callback URLs
                 </h3>
-                <ol className="ml-5 list-inside list-[upper-alpha] space-y-2 group-has-[:checked]:opacity-50">
+                <ol className="ml-14 list-inside list-[upper-alpha] space-y-2 group-has-[:checked]:opacity-50">
                   <li>
                     In Kinde, go to{" "}
                     <strong>{"Settings > Applications > [Your app] > View details"}</strong>.
                   </li>
                   <li>
                     Add your <strong>callback URLs</strong> in the relevant fields. For example:
-                    <ul className="my-4 ms-5 mt-3 list-inside list-disc space-y-2">
-                      <li>
-                        <strong>Allowed callback URLs</strong> (also known as redirect URIs)
-                        <ul className="my-2 ml-6 list-inside list-[circle] space-y-2">
-                          <li>
-                            <span className="font-sm leading-1 mr-1 inline-flex items-center rounded border border-slate-200 bg-slate-50 px-2 py-1 text-center font-mono text-xs uppercase">
-                              Local
-                            </span>
-                            <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
-                              http://localhost:3000/api/auth/kinde_callback
-                            </span>
-                            .
-                          </li>
+                    <ul className="my-4 ms-5 mt-3 list-inside list-disc space-y-6">
+                      <li className="mt-4">
+                        <strong>Allowed callback URLs</strong>:
+                        <ul className="my-2 space-y-2 overflow-x-auto text-nowrap rounded-md border border-slate-100 bg-slate-50 p-5 font-mono text-[13px]">
+                          <li>http://localhost:3000/api/auth/kinde_callback</li>
                           {process.env.VERCEL && (
                             <>
                               <li>
-                                <span className="font-sm leading-1 mr-1 inline-flex items-center rounded border border-slate-200 bg-slate-50 px-2 py-1 text-center font-mono text-xs uppercase">
-                                  Preview
-                                </span>
-                                <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
-                                  https://*<strong>[your-vercel-slug]</strong>
-                                  .vercel.com/api/auth/kinde_callback
-                                </span>
-                                .
+                                https://*<strong>[your-vercel-slug]</strong>
+                                .vercel.com/api/auth/kinde_callback
                               </li>
                               <li>
-                                <span className="font-sm leading-1 mr-1 inline-flex items-center rounded border border-slate-200 bg-slate-50 px-2 py-1 text-center font-mono text-xs uppercase">
-                                  Prod
-                                </span>
-                                <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
-                                  https://{process.env.VERCEL_PROJECT_PRODUCTION_URL}
-                                  /api/auth/kinde_callback
-                                </span>
-                                .
+                                https://{process.env.VERCEL_PROJECT_PRODUCTION_URL}
+                                /api/auth/kinde_callback
                               </li>
                             </>
                           )}
                         </ul>
                       </li>
                       <li>
-                        <strong>Allowed logout redirect URLs</strong> - for example:
-                        <ul className="my-2 ml-6 list-inside list-[circle] space-y-2">
-                          <li>
-                            <span className="font-sm leading-1 mr-1 inline-flex items-center rounded border border-slate-200 bg-slate-50 px-2 py-1 text-center font-mono text-xs uppercase">
-                              Local
-                            </span>
-                            <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
-                              http://localhost:3000
-                            </span>
-                            .
-                          </li>
+                        <strong>Allowed logout redirect URLs</strong>:
+                        <ul className="my-2 space-y-2 overflow-x-auto text-nowrap rounded-md border border-slate-100 bg-slate-50 p-5 font-mono text-[13px]">
+                          <li>http://localhost:3000</li>
                           {process.env.VERCEL && (
                             <>
                               <li>
-                                <span className="font-sm leading-1 mr-1 inline-flex items-center rounded border border-slate-200 bg-slate-50 px-2 py-1 text-center font-mono text-xs uppercase">
-                                  Preview
-                                </span>
-                                <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
-                                  https://*<strong>[your-vercel-slug]</strong>
-                                  .vercel.com
-                                </span>
-                                .
+                                https://*<strong>[your-vercel-slug]</strong>
+                                .vercel.com
                               </li>
-                              <li>
-                                <span className="font-sm leading-1 mr-1 inline-flex items-center rounded border border-slate-200 bg-slate-50 px-2 py-1 text-center font-mono text-xs uppercase">
-                                  Prod
-                                </span>
-                                <span className="rounded-md border border-slate-100 bg-slate-50 p-[.3em] font-mono text-sm">
-                                  https://{process.env.VERCEL_PROJECT_PRODUCTION_URL}
-                                </span>
-                                .
-                              </li>
+                              <li>https://{process.env.VERCEL_PROJECT_PRODUCTION_URL}</li>
                             </>
                           )}
                         </ul>
