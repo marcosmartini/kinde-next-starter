@@ -82,8 +82,8 @@ Make sure you enabled at least one connection for your application in Kinde (e.g
    ```sh
    git clone https://github.com/marcosmartini/kinde-next-starter.git
    ```
-2. [Create a Kinde account](https://github.com/marcosmartini/kinde-next-starter?tab=readme-ov-file#1-a-kinde-account)
-3. [Create a backend application](https://github.com/marcosmartini/kinde-next-starter?tab=readme-ov-file#1-a-kinde-account)
+2. [Create a Kinde account](#1-create-a-kinde-account)
+3. [Create a backend application](#2-add-a-backend-application-in-kinde)
 4. Add your callback URLs in the relevant fields for your application in Kinde:
 
    - #### Allowed callback URLs:
