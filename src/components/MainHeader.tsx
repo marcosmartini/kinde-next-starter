@@ -54,7 +54,7 @@ export default async function Header({ showNav = true }: HeaderProps) {
             target="_blank"
             href="#"
             rel="noopener noreferrer"
-            className="focus-visible:ring-ring border-input hover:bg-accent hover:text-accent-foreground inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md border bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50"
+            className="focus-visible:ring-ring border-input hover:bg-accent hover:text-accent-foreground bg-background inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md border px-4 py-2 text-sm font-medium shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50"
           >
             <svg
               role="img"
@@ -69,7 +69,7 @@ export default async function Header({ showNav = true }: HeaderProps) {
             <span className="ml-2 hidden md:flex">GitHub</span>
           </a>
           <a
-            href="#"
+            href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmarcosmartini%2Fkinde-next-starter&env=KINDE_ISSUER_URL,KINDE_CLIENT_ID,KINDE_CLIENT_SECRET&envDescription=Environment%20variables%20needed&envLink=https%3A%2F%2Fdocs.kinde.com%2Fdeveloper-tools%2Fsdks%2Fbackend%2Fnextjs-sdk%2F%23configure-environment-variables&project-name=kinde-next-starter&repository-name=kinde-next-starter"
             target="_blank"
             className="focus-visible:ring-ring text-primary-foreground inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md bg-black px-4 py-2 text-sm font-medium text-white shadow transition-colors focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50"
           >
