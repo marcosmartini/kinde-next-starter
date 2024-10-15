@@ -70,7 +70,7 @@ export default function Home() {
                             <>
                               <li>
                                 https://*<strong>[your-vercel-slug]</strong>
-                                .vercel.com/api/auth/kinde_callback
+                                .vercel.app/api/auth/kinde_callback
                               </li>
                               <li>
                                 https://{process.env.VERCEL_PROJECT_PRODUCTION_URL}
@@ -88,7 +88,7 @@ export default function Home() {
                             <>
                               <li>
                                 https://*<strong>[your-vercel-slug]</strong>
-                                .vercel.com
+                                .vercel.app
                               </li>
                               <li>https://{process.env.VERCEL_PROJECT_PRODUCTION_URL}</li>
                             </>
