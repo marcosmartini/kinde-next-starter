@@ -36,12 +36,40 @@ Create a [Vercel](https://vercel.com/signup) account if you already don't have o
 
 ## Deploy this template
 
-To deploy this template to Vercel, simply click the button below:
+After clicking the button below, you will need to fill-in the following environment variables to successfully deploy this template:
 
 <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmarcosmartini%2Fkinde-next-starter&env=KINDE_ISSUER_URL,KINDE_CLIENT_ID,KINDE_CLIENT_SECRET&envDescription=Environment%20variables%20needed&envLink=https%3A%2F%2Fdocs.kinde.com%2Fdeveloper-tools%2Fsdks%2Fbackend%2Fnextjs-sdk%2F%23configure-environment-variables&project-name=kinde-next-starter&repository-name=kinde-next-starter"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
-
-You will need to fill-in the following environment variables:
 
 - `KINDE_ISSUER_URL`: This is the `Domain` value mentioned on the step above.
 - `KINDE_CLIENT_ID`: This is the `Client ID` value mentioned on the step above.
 - `KINDE_CLIENT_SECRET`: This is the `Client secret` value mentioned on the step above.
+
+## After you deploy
+
+Before signing in or signing up, make sure to go through the checklist. Basically:
+
+### 1. Check if an authentication method is enabled
+
+Make sure you enabled at least one connection for your application in Kinde (e.g. "Email + code") under `Settings > Applications > [Your application] > Authentication`.
+
+### Set callback URLs
+
+1. In Kinde, go to `Settings > Applications > [Your app] > View details`.
+
+2. Add your callback URLs in the relevant fields. For example:
+
+   - #### Allowed callback URLs:
+
+   ```bash
+   http://localhost:3000/api/auth/kinde_callback
+   https://*[your-vercel-slug].vercel.com/api/auth/kinde_callback
+   ```
+
+   - #### Allowed logout redirect URLs:
+
+   ```bash
+   http://localhost:3000
+   https://*[your-vercel-slug].vercel.com
+   ```
+
+3. Select Save.
