@@ -12,7 +12,7 @@ export default async function Header({ showNav = true }: HeaderProps) {
   const { isAuthenticated } = getKindeServerSession();
 
   return (
-    <header className="sticky top-0 border-[1px] border-b-[#f5f5f5] bg-white/70 backdrop-blur-md">
+    <header className="sticky top-0 z-10 border-[1px] border-b-[#f5f5f5] bg-white/70 backdrop-blur-md">
       <div className="flex items-center gap-2">
         <a href="/" title="Go to the homepage">
           <Image src={KindeLogo} width={64} alt="Kinde logo" />

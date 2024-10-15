@@ -1,3 +1,4 @@
+import Topics from "@/components/Topics";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 export default async function Dashboard() {
@@ -50,39 +51,68 @@ export default async function Dashboard() {
   ];
 
   return (
-    <main className="mx-auto flex h-full w-full max-w-7xl flex-col gap-8 px-4 py-20 md:px-8">
-      <div>
-        <h1 className="mb-12 text-center text-6xl tracking-tight">
+    <main className="mx-auto flex h-full w-full max-w-7xl animate-fade-in-up flex-col gap-8 px-4 py-12 opacity-0 md:px-8">
+      <section className="py-16">
+        <h1 className="mb-12 text-center text-7xl tracking-tight">
           Your authentication is all sorted!
         </h1>
-
         {(await isAuthenticated()) && (
-          <>
-            <div className="mx-auto flex w-full max-w-2xl flex-col gap-6">
-              <pre className="overflow-x-auto rounded-xl border border-slate-100 bg-white p-8 text-sm">
-                <code>{JSON.stringify(user, null, 2)}</code>
-              </pre>
+          <div className="mx-auto flex w-full max-w-md flex-col items-center justify-center gap-4 pt-10">
+            <div className="flex w-full items-center justify-start gap-2">
+              <div className="inline-flex rounded-md bg-purple-200 px-2 py-[.3em] font-mono text-sm text-purple-700">
+                id
+              </div>
+              <div className="inline-flex rounded-md border-slate-200 bg-slate-100 px-2 py-[.3em] font-mono text-sm">
+                {user?.id}
+              </div>
             </div>
-          </>
-        )}
-      </div>
-      <hr className="my-10" />
-      <div>
-        <h2 className="mb-12 text-center text-4xl leading-none tracking-tight">
-          Some topics to explore
-        </h2>
-        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
-          {contentToExplore?.map((topic) => (
-            <li
-              key={topic?.title}
-              className="flex aspect-square flex-col gap-4 rounded-xl border border-slate-100 bg-white p-8"
+            <div className="flex w-full items-center justify-start gap-2">
+              <div className="inline-flex rounded-md bg-purple-200 px-2 py-[.3em] font-mono text-sm text-purple-700">
+                email
+              </div>
+              <div className="inline-flex rounded-md border-slate-200 bg-slate-100 px-2 py-[.3em] font-mono text-sm">
+                {user?.email}
+              </div>
+            </div>
+            <div className="flex w-full items-center justify-start gap-2">
+              <div className="inline-flex rounded-md bg-purple-200 px-2 py-[.3em] font-mono text-sm text-purple-700">
+                given_name
+              </div>
+              <div className="inline-flex rounded-md border-slate-200 bg-slate-100 px-2 py-[.3em] font-mono text-sm">
+                {user?.given_name}
+              </div>
+            </div>
+            <div className="flex w-full items-center justify-start gap-2">
+              <div className="inline-flex rounded-md bg-purple-200 px-2 py-[.3em] font-mono text-sm text-purple-700">
+                family_name
+              </div>
+              <div className="inline-flex rounded-md border-slate-200 bg-slate-100 px-2 py-[.3em] font-mono text-sm">
+                {user?.family_name}
+              </div>
+            </div>
+            <a
+              href="https://docs.kinde.com/developer-tools/sdks/backend/nextjs-sdk/"
+              className="button mt-4 block w-full"
             >
-              <h3 className="text-xl">{topic.title}</h3>
-              <ul className="space-y-1">
+              See full Next.js docs
+            </a>
+          </div>
+        )}
+      </section>
+      <hr className="my-10" />
+      <section className="py-16">
+        <h2 className="mb-16 text-5xl leading-none tracking-tight">
+          Get started with our Next.js SDK
+        </h2>
+        <ul className="grid grid-cols-1 divide-x-[1px] py-8 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+          {contentToExplore?.map((topic) => (
+            <li key={topic?.title} className="-mx-8 flex flex-col gap-8 px-8">
+              <h3 className="text-2xl">{topic.title}</h3>
+              <ul className="flex flex-col gap-3">
                 {topic.content?.map((content) => (
-                  <li key={content.link}>
+                  <li key={content.link} className="inline-flex">
                     <a
-                      className="underline underline-offset-4 transition hover:opacity-70"
+                      className="rounded-lg border border-slate-100 bg-white px-3 py-2 transition hover:border-black hover:bg-black hover:text-white"
                       href={content.link}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -95,7 +125,24 @@ export default async function Dashboard() {
             </li>
           ))}
         </ul>
-      </div>
+        <div className="flex items-center justify-center pb-2 pt-12">
+          <a
+            href="https://docs.kinde.com/developer-tools/sdks/backend/nextjs-sdk"
+            className="button inline-flex"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            See full Next.js SDK docs
+          </a>
+        </div>
+      </section>
+      <hr className="my-10" />
+      <section className="py-16">
+        <h2 className="mb-16 pb-6 text-5xl leading-none tracking-tight">
+          Explore all you can do with Kinde
+        </h2>
+        <Topics />
+      </section>
     </main>
   );
 }

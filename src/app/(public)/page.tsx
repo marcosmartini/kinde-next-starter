@@ -2,7 +2,7 @@ import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components
 
 export default function Home() {
   return (
-    <main className="mx-auto grid h-full max-w-3xl place-items-center px-4 py-20 md:px-8">
+    <main className="mx-auto grid h-full max-w-3xl animate-fade-in-up place-items-center px-4 py-20 opacity-0 md:px-8">
       <div className="grid place-items-center gap-20">
         <h1 className="max-w-[12ch] text-center">Auth for modern applications</h1>
         <section className="pb-20">
