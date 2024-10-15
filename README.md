@@ -4,11 +4,11 @@ A starter template using [Next.js](https://nextjs.org) and [Kinde](https://kinde
 
 ## Pre-requisites
 
-### 1. A Kinde account
+### 1. Create a Kinde account
 
 Create a [Kinde](https://app.kinde.com/register) account if you already don't have one.
 
-### 2. A backend application in Kinde
+### 2. Add a backend application in Kinde
 
 1. Go to `Settings > Applications`.
 2. Click the `Add application` button in the top right.
@@ -20,7 +20,7 @@ Create a [Kinde](https://app.kinde.com/register) account if you already don't ha
 8. Make sure you enabled at least one connection for your application (e.g. "Email + code")
 9. Click `Save`.
 
-### 3. A Vercel account
+### 3. Create a Vercel account
 
 Create a [Vercel](https://vercel.com/signup) account if you already don't have one.
 
@@ -75,3 +75,29 @@ Make sure you enabled at least one connection for your application in Kinde (e.g
    ```
 
 3. Click `Save`.
+
+## Running locally
+
+1. Clone this repository
+   ```sh
+   git clone https://github.com/marcosmartini/kinde-next-starter.git
+   ```
+2. [Create a Kinde account](https://github.com/marcosmartini/kinde-next-starter?tab=readme-ov-file#1-a-kinde-account)
+3. [Create a backend application](https://github.com/marcosmartini/kinde-next-starter?tab=readme-ov-file#1-a-kinde-account)
+4. Add your callback URLs in the relevant fields for your application in Kinde:
+
+   - #### Allowed callback URLs:
+
+   ```bash
+   http://localhost:3000/api/auth/kinde_callback
+   ```
+
+   - #### Allowed logout redirect URLs:
+
+   ```bash
+   http://localhost:3000
+   ```
+
+5. Fill in the missing environment variables in `.env.local.example`
+6. Install the dependencies with `npm run install`
+7. Start the development server with `npm run dev`
