@@ -58,21 +58,21 @@ Make sure you enabled at least one connection for your application in Kinde (e.g
 
 2. Add your callback URLs in the relevant fields:
 
-> [!IMPORTANT]
-> Make sure to replace `[your-vercel-slug]` with your Vercel project or team slug, but keep the `*` (asterisk). [More info on wild card callback URLs in Kinde](https://docs.kinde.com/get-started/connect/callback-urls/?r=search#wildcards-in-callback-urls)
+   > [!IMPORTANT]
+   > Make sure to replace `[your-vercel-slug]` with your Vercel project or team slug, but keep the `*` (asterisk). [More info on wild card callback URLs in Kinde](https://docs. kinde.com/get-started/connect/callback-urls/?r=search#wildcards-in-callback-urls)
 
-- #### Allowed callback URLs:
+   - #### Allowed callback URLs:
 
-```bash
-http://localhost:3000/api/auth/kinde_callback
-https://*[your-vercel-slug].vercel.com/api/auth/kinde_callback
-```
+   ```bash
+   http://localhost:3000/api/auth/kinde_callback
+   https://*[your-vercel-slug].vercel.com/api/auth/kinde_callback
+   ```
 
-- #### Allowed logout redirect URLs:
+   - #### Allowed logout redirect URLs:
 
-```bash
-http://localhost:3000
-https://*[your-vercel-slug].vercel.com
-```
+   ```bash
+   http://localhost:3000
+   https://*[your-vercel-slug].vercel.com
+   ```
 
 3. Click `Save`.
