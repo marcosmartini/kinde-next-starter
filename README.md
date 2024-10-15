@@ -56,20 +56,22 @@ Make sure you enabled at least one connection for your application in Kinde (e.g
 
 1. In Kinde, go to `Settings > Applications > [Your app] > View details`.
 
-2. Add your callback URLs in the relevant fields. For example:
+2. Add your callback URLs in the relevant fields:
 
-   - #### Allowed callback URLs:
+> Make sure to replace `[your-vercel-slug]` with your Vercel project or team slug
 
-   ```bash
-   http://localhost:3000/api/auth/kinde_callback
-   https://*[your-vercel-slug].vercel.com/api/auth/kinde_callback
-   ```
+- #### Allowed callback URLs:
 
-   - #### Allowed logout redirect URLs:
+```bash
+http://localhost:3000/api/auth/kinde_callback
+https://*[your-vercel-slug].vercel.com/api/auth/kinde_callback
+```
 
-   ```bash
-   http://localhost:3000
-   https://*[your-vercel-slug].vercel.com
-   ```
+- #### Allowed logout redirect URLs:
+
+```bash
+http://localhost:3000
+https://*[your-vercel-slug].vercel.com
+```
 
 3. Select Save.
