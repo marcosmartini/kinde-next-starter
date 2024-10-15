@@ -54,12 +54,13 @@ Make sure you enabled at least one connection for your application in Kinde (e.g
 
 ### Set callback URLs
 
+> [!IMPORTANT]
+> Make sure to replace `[your-vercel-slug]` in the code examples below with your Vercel project or team slug, but keep the `*` (asterisk).
+> [More info on wild card callback URLs in Kinde](https://docs.kinde.com/get-started/connect/callback-urls/?r=search#wildcards-in-callback-urls)
+
 1. In Kinde, go to `Settings > Applications > [Your app] > View details`.
 
 2. Add your callback URLs in the relevant fields:
-
-   > [!IMPORTANT]
-   > Make sure to replace `[your-vercel-slug]` with your Vercel project or team slug, but keep the `*` (asterisk). [More info on wild card callback URLs in Kinde](https://docs. kinde.com/get-started/connect/callback-urls/?r=search#wildcards-in-callback-urls)
 
    - #### Allowed callback URLs:
 
