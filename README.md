@@ -84,7 +84,8 @@ Make sure you enabled at least one connection for your application in Kinde (e.g
    ```
 2. [Create a Kinde account](#1-create-a-kinde-account)
 3. [Create a backend application](#2-add-a-backend-application-in-kinde)
-4. Add your callback URLs in the relevant fields for your application in Kinde:
+4. Make sure you enabled at least one connection for your application in Kinde (e.g. "Email + code") under `Settings > Applications > [Your application] > Authentication`.
+5. Add your callback URLs in the relevant fields for your application in Kinde:
 
    - #### Allowed callback URLs:
 
@@ -98,6 +99,6 @@ Make sure you enabled at least one connection for your application in Kinde (e.g
    http://localhost:3000
    ```
 
-5. Fill in the missing environment variables in `.env.local.example`
-6. Install the dependencies with `npm run install`
-7. Start the development server with `npm run dev`
+6. Fill in the missing environment variables in `.env.local.example`
+7. Install the dependencies with `npm run install`
+8. Start the development server with `npm run dev`
