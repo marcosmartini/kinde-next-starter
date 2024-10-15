@@ -26,10 +26,8 @@ Create a [Vercel](https://vercel.com/signup) account if you already don't have o
 
 ## Get your environment variables from Kinde
 
-1. In Kinde, go to `Settings > Applications`.
-2. Find your application and click `View details`.
-3. In the left side menu, click on `Details`.
-4. For the next step, you will need the following values under `App keys`:
+1. In Kinde, go to `Settings > Applications > [Your app] > Details`.
+2. For the next step, you will need the following values under `App keys`:
    - `Domain`
    - `Client ID`
    - `Client secret`
