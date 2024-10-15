@@ -59,7 +59,7 @@ Make sure you enabled at least one connection for your application in Kinde (e.g
 2. Add your callback URLs in the relevant fields:
 
 > [!IMPORTANT]
-> Make sure to replace `[your-vercel-slug]` with your Vercel project or team slug</aside>
+> Make sure to replace `[your-vercel-slug]` with your Vercel project or team slug, but keep the `*`. [More info](https://docs.kinde.com/get-started/connect/callback-urls/?r=search#wildcards-in-callback-urls)
 
 - #### Allowed callback URLs:
 
