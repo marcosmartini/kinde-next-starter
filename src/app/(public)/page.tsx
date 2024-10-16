@@ -67,10 +67,16 @@ export default function Home() {
                         <ul className="my-2 space-y-2 overflow-x-auto text-nowrap rounded-md border border-slate-100 bg-slate-50 p-5 font-mono text-[13px]">
                           <li>http://localhost:3000/api/auth/kinde_callback</li>
                           {process.env.VERCEL && (
-                            <li>
-                              https://*<strong>[your-vercel-slug]</strong>
-                              .vercel.app/api/auth/kinde_callback
-                            </li>
+                            <>
+                              <li>
+                                `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}
+                                /api/auth/kinde_callback`
+                              </li>
+                              <li>
+                                https://*<strong>[your-vercel-slug]</strong>
+                                .vercel.app/api/auth/kinde_callback
+                              </li>
+                            </>
                           )}
                         </ul>
                       </li>
@@ -79,10 +85,13 @@ export default function Home() {
                         <ul className="my-2 space-y-2 overflow-x-auto text-nowrap rounded-md border border-slate-100 bg-slate-50 p-5 font-mono text-[13px]">
                           <li>http://localhost:3000</li>
                           {process.env.VERCEL && (
-                            <li>
-                              https://*<strong>[your-vercel-slug]</strong>
-                              .vercel.app
-                            </li>
+                            <>
+                              <li>`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`</li>
+                              <li>
+                                https://*<strong>[your-vercel-slug]</strong>
+                                .vercel.app
+                              </li>
+                            </>
                           )}
                         </ul>
                       </li>
