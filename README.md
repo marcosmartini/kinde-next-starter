@@ -1,5 +1,7 @@
 # Kinde Next.js Starter
 
+![Composite of the project running in a browser window](https://marcosmartini.org/assets/k.jpg)
+
 A starter template using [Next.js](https://nextjs.org) and [Kinde](https://kinde.com) for authentication.
 
 ## Pre-requisites
