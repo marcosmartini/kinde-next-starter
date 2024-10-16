@@ -69,8 +69,7 @@ export default function Home() {
                           {process.env.VERCEL && (
                             <>
                               <li>
-                                `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}
-                                /api/auth/kinde_callback`
+                                {`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/api/auth/kinde_callback`}
                               </li>
                               <li>
                                 https://*<strong>[your-vercel-slug]</strong>
@@ -86,7 +85,7 @@ export default function Home() {
                           <li>http://localhost:3000</li>
                           {process.env.VERCEL && (
                             <>
-                              <li>`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`</li>
+                              <li>{`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`}</li>
                               <li>
                                 https://*<strong>[your-vercel-slug]</strong>
                                 .vercel.app
