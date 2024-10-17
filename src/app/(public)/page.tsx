@@ -21,7 +21,7 @@ export default function Home() {
                   <span className="mr-6 inline-block h-7 w-7 rounded-full bg-black text-center text-white">
                     1
                   </span>
-                  Enable an authentication connection
+                  Enable authentication
                 </h3>
                 <ol className="ml-14 list-inside list-[upper-alpha] space-y-2 group-has-[:checked]:opacity-50">
                   <li>
@@ -29,8 +29,7 @@ export default function Home() {
                     <strong>{"Settings > Applications > [Your app] > Authentication"}</strong>.
                   </li>
                   <li>
-                    Make sure you have connection(s) enabled for your app — if not, please enable at
-                    least one (e.g. <em>Email + code</em>).
+                    Enable at least one authentication method (e.g. <em>Email + code</em>).
                   </li>
                   <li>
                     Select <strong>Save</strong>.

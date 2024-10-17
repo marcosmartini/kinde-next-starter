@@ -30,7 +30,7 @@ export default async function Dashboard() {
           link: "https://docs.kinde.com/developer-tools/sdks/backend/nextjs-sdk/#create-organizations",
         },
         {
-          title: "Sign into organizations",
+          title: "Sign in to organizations",
           link: "https://docs.kinde.com/developer-tools/sdks/backend/nextjs-sdk/#sign-into-organizations",
         },
       ],
@@ -93,6 +93,8 @@ export default async function Dashboard() {
             <a
               href="https://docs.kinde.com/developer-tools/sdks/backend/nextjs-sdk/"
               className="button mt-4 block w-full"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               See full Next.js docs
             </a>
