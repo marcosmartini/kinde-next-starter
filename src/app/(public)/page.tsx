@@ -38,7 +38,7 @@ export default function Home() {
                 <input
                   id="enable-auth"
                   type="checkbox"
-                  className="relative bottom-0 ml-auto h-6 w-6 appearance-none rounded border border-black transition duration-150 after:relative after:block after:scale-0 after:content-[url('data:image/svg+xml,%3Csvg%20fill%3D%22none%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpath%20stroke%3D%22white%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22M5%2011.75%2010.499%2017%2021%207%22%2F%3E%0A%3C%2Fsvg%3E%0A')] checked:bg-black checked:after:scale-100"
+                  className="relative bottom-0 ml-auto h-6 w-6 appearance-none overflow-hidden rounded border border-black transition duration-150 after:relative after:block after:scale-0 after:content-[url('data:image/svg+xml,%3Csvg%20fill%3D%22none%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpath%20stroke%3D%22white%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22M5%2011.75%2010.499%2017%2021%207%22%2F%3E%0A%3C%2Fsvg%3E%0A')] checked:bg-black checked:after:scale-100"
                 />
               </label>
             </li>
@@ -102,7 +102,7 @@ export default function Home() {
                 <input
                   id="callbacks"
                   type="checkbox"
-                  className="relative bottom-0 right-0 ml-auto h-6 w-6 appearance-none rounded border border-black transition duration-150 after:relative after:block after:scale-0 after:content-[url('data:image/svg+xml,%3Csvg%20fill%3D%22none%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpath%20stroke%3D%22white%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22M5%2011.75%2010.499%2017%2021%207%22%2F%3E%0A%3C%2Fsvg%3E%0A')] checked:bg-black checked:after:scale-100"
+                  className="relative bottom-0 right-0 ml-auto h-6 w-6 appearance-none overflow-hidden rounded border border-black transition duration-150 after:relative after:block after:scale-0 after:content-[url('data:image/svg+xml,%3Csvg%20fill%3D%22none%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpath%20stroke%3D%22white%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22M5%2011.75%2010.499%2017%2021%207%22%2F%3E%0A%3C%2Fsvg%3E%0A')] checked:bg-black checked:after:scale-100"
                 />
               </label>
             </li>
