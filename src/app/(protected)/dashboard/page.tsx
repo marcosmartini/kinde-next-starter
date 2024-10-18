@@ -106,14 +106,13 @@ export default async function Dashboard() {
         <h2 className="mb-16 text-5xl leading-none tracking-tight">
           Get started with our Next.js SDK
         </h2>
-        <ul className="grid grid-cols-1 divide-x-[1px] py-8 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+        <ul className="grid grid-cols-1 divide-x py-8 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
           {contentToExplore?.map((topic) => (
             <li key={topic?.title} className="-mx-8 flex flex-col gap-8 px-8">
               <h3 className="text-2xl">{topic.title}</h3>
               <ul className="flex flex-col gap-3">
                 {topic.content?.map((content) => (
                   <li key={content.link} className="inline-flex">
-                    {console.log(content.link)}
                     <a
                       className="rounded-lg border border-slate-100 bg-white px-3 py-2 transition hover:border-black hover:bg-black hover:text-white"
                       href={content.link}

@@ -1,9 +1,9 @@
 import { LoginLink, LogoutLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import KindeLogo from "../app/assets/kinde.svg";
-import NextLogo from "../app/assets/next.svg";
 import Image from "next/image";
 import Link from "next/link";
+import KindeLogo from "../app/assets/kinde.svg";
+import NextLogo from "../app/assets/next.svg";
 
 interface HeaderProps {
   showNav?: boolean;
@@ -13,7 +13,7 @@ export default async function Header({ showNav = true }: HeaderProps) {
   const { isAuthenticated } = getKindeServerSession();
 
   return (
-    <header className="sticky top-0 z-10 border-[1px] border-b-[#f5f5f5] bg-white/70 backdrop-blur-md">
+    <header className="sticky top-0 z-10 flex w-full items-center justify-between border border-b-slate-100 bg-white/70 p-4 backdrop-blur-md md:p-8">
       <div className="flex items-center gap-2">
         <Link href="/" title="Go to the homepage">
           <Image
@@ -47,8 +47,8 @@ export default async function Header({ showNav = true }: HeaderProps) {
         </Link>
       </div>
       {showNav ? (
-        <nav>
-          <ul>
+        <nav className="font-medium">
+          <ul className="flex items-center gap-4">
             {(await isAuthenticated()) ? (
               <li>
                 <LogoutLink>Log out</LogoutLink>

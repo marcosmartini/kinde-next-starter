@@ -12,12 +12,12 @@ export default function Home() {
             </h2>
           </div>
           <ol className="grid grid-cols-1 gap-6">
-            <li className="step-card">
+            <li className="relative flex flex-col gap-6 rounded-xl border border-black/10 bg-white transition hover:bg-white hover:shadow-xl hover:shadow-black/5 has-[:checked]:bg-white has-[:checked]:outline">
               <label
                 htmlFor="enable-auth"
                 className="group flex cursor-pointer flex-col gap-4 p-8 has-[:checked]:line-through"
               >
-                <h3 className="group-has-[:checked]:opacity-50">
+                <h3 className="text-lg group-has-[:checked]:opacity-50">
                   <span className="mr-6 inline-block h-7 w-7 rounded-full bg-black text-center text-white">
                     1
                   </span>
@@ -38,16 +38,16 @@ export default function Home() {
                 <input
                   id="enable-auth"
                   type="checkbox"
-                  className="relative bottom-0 ml-auto h-6 w-6 appearance-none rounded border-[1px] border-black transition duration-150 after:relative after:block after:scale-0 after:content-[url('data:image/svg+xml,%3Csvg%20fill%3D%22none%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpath%20stroke%3D%22white%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22M5%2011.75%2010.499%2017%2021%207%22%2F%3E%0A%3C%2Fsvg%3E%0A')] checked:bg-black checked:after:scale-100"
+                  className="relative bottom-0 ml-auto h-6 w-6 appearance-none rounded border border-black transition duration-150 after:relative after:block after:scale-0 after:content-[url('data:image/svg+xml,%3Csvg%20fill%3D%22none%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpath%20stroke%3D%22white%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22M5%2011.75%2010.499%2017%2021%207%22%2F%3E%0A%3C%2Fsvg%3E%0A')] checked:bg-black checked:after:scale-100"
                 />
               </label>
             </li>
-            <li className="step-card">
+            <li className="relative flex flex-col gap-6 rounded-xl border border-black/10 bg-white transition hover:bg-white hover:shadow-xl hover:shadow-black/5 has-[:checked]:bg-white has-[:checked]:outline">
               <label
                 htmlFor="callbacks"
                 className="group flex cursor-pointer flex-col gap-4 p-8 has-[:checked]:line-through"
               >
-                <h3 className="group-has-[:checked]:opacity-50">
+                <h3 className="text-lg group-has-[:checked]:opacity-50">
                   <span className="mr-6 inline-block h-7 w-7 rounded-full bg-black text-center text-white">
                     2
                   </span>
@@ -102,11 +102,11 @@ export default function Home() {
                 <input
                   id="callbacks"
                   type="checkbox"
-                  className="relative bottom-0 right-0 ml-auto h-6 w-6 appearance-none rounded border-[1px] border-black transition duration-150 after:relative after:block after:scale-0 after:content-[url('data:image/svg+xml,%3Csvg%20fill%3D%22none%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpath%20stroke%3D%22white%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22M5%2011.75%2010.499%2017%2021%207%22%2F%3E%0A%3C%2Fsvg%3E%0A')] checked:bg-black checked:after:scale-100"
+                  className="relative bottom-0 right-0 ml-auto h-6 w-6 appearance-none rounded border border-black transition duration-150 after:relative after:block after:scale-0 after:content-[url('data:image/svg+xml,%3Csvg%20fill%3D%22none%22%20aria-hidden%3D%22true%22%20focusable%3D%22false%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpath%20stroke%3D%22white%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.5%22%20d%3D%22M5%2011.75%2010.499%2017%2021%207%22%2F%3E%0A%3C%2Fsvg%3E%0A')] checked:bg-black checked:after:scale-100"
                 />
               </label>
             </li>
-            <li className="step-card p-8">
+            <li className="relative flex flex-col gap-6 rounded-xl border border-black/10 bg-white p-8 transition hover:bg-white hover:shadow-xl hover:shadow-black/5 has-[:checked]:bg-white has-[:checked]:outline">
               <div className="flex items-center justify-between">
                 <h3>
                   <span className="mr-6 inline-block h-7 w-7 rounded-full bg-black text-center text-white">
