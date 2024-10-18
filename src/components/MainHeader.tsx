@@ -3,6 +3,7 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import KindeLogo from "../app/assets/kinde.svg";
 import NextLogo from "../app/assets/next.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 interface HeaderProps {
   showNav?: boolean;
@@ -14,20 +15,36 @@ export default async function Header({ showNav = true }: HeaderProps) {
   return (
     <header className="sticky top-0 z-10 border-[1px] border-b-[#f5f5f5] bg-white/70 backdrop-blur-md">
       <div className="flex items-center gap-2">
-        <a href="/" title="Go to the homepage">
-          <Image src={KindeLogo} width={64} alt="Kinde logo" />
-        </a>
+        <Link href="/" title="Go to the homepage">
+          <Image
+            src={KindeLogo}
+            width={64}
+            height={21}
+            alt="Kinde logo"
+            fetchPriority="high"
+            decoding="async"
+            priority
+          />
+        </Link>
         <svg height="32" viewBox="0 0 32 32" width="32">
           <path d="M22 5L9 28" stroke="#eaeaea" strokeLinecap="round" strokeLinejoin="round"></path>
         </svg>
-        <a
+        <Link
           href="https://nextjs.org"
           target="_blank"
           rel="noopener noreferrer"
           title="Visit the Next.js website"
         >
-          <Image src={NextLogo} width={90} alt="Next.js logo" />
-        </a>
+          <Image
+            src={NextLogo}
+            width={90}
+            height={18}
+            alt="Next.js logo"
+            fetchPriority="high"
+            decoding="async"
+            priority
+          />
+        </Link>
       </div>
       {showNav ? (
         <nav>
