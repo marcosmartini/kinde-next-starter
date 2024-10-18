@@ -7,7 +7,7 @@ export default function Home() {
         <h1 className="max-w-[12ch] text-center">Auth for modern applications</h1>
         <section className="pb-20">
           <div className="mb-6 flex items-center">
-            <h2 className="mx-auto inline rounded bg-purple-100 px-2 py-1 text-center text-sm text-purple-700">
+            <h2 className="mx-auto inline rounded border border-slate-200 bg-slate-50 px-2 py-1 text-center text-sm text-black">
               First things first
             </h2>
           </div>

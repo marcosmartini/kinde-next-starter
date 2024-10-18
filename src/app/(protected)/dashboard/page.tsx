@@ -44,7 +44,7 @@ export default async function Dashboard() {
         },
         {
           title: "Client side",
-          link: "https://docs.kinde.com/developer-tools/sdks/backend/nextjs-sdk/#kinde-auth-data---server",
+          link: "https://docs.kinde.com/developer-tools/sdks/backend/nextjs-sdk/#kinde-auth-data---client",
         },
       ],
     },
@@ -59,34 +59,34 @@ export default async function Dashboard() {
         {(await isAuthenticated()) && (
           <div className="mx-auto flex w-full max-w-md flex-col items-center justify-center gap-4 pt-10">
             <div className="flex w-full items-center justify-start gap-2">
-              <div className="inline-flex rounded-md bg-purple-200 px-2 py-[.3em] font-mono text-sm text-purple-700">
+              <div className="inline-flex rounded-md border border-slate-300 bg-slate-100 px-2 py-[.3em] font-mono text-sm text-black">
                 id
               </div>
-              <div className="inline-flex rounded-md border-slate-200 bg-slate-100 px-2 py-[.3em] font-mono text-sm">
+              <div className="inline-flex rounded-md border border-slate-200 bg-white px-2 py-[.3em] font-mono text-sm">
                 {user?.id}
               </div>
             </div>
             <div className="flex w-full items-center justify-start gap-2">
-              <div className="inline-flex rounded-md bg-purple-200 px-2 py-[.3em] font-mono text-sm text-purple-700">
+              <div className="inline-flex rounded-md border border-slate-300 bg-slate-100 px-2 py-[.3em] font-mono text-sm text-black">
                 email
               </div>
-              <div className="inline-flex rounded-md border-slate-200 bg-slate-100 px-2 py-[.3em] font-mono text-sm">
+              <div className="inline-flex rounded-md border border-slate-200 bg-white px-2 py-[.3em] font-mono text-sm">
                 {user?.email}
               </div>
             </div>
             <div className="flex w-full items-center justify-start gap-2">
-              <div className="inline-flex rounded-md bg-purple-200 px-2 py-[.3em] font-mono text-sm text-purple-700">
+              <div className="inline-flex rounded-md border border-slate-300 bg-slate-100 px-2 py-[.3em] font-mono text-sm text-black">
                 given_name
               </div>
-              <div className="inline-flex rounded-md border-slate-200 bg-slate-100 px-2 py-[.3em] font-mono text-sm">
+              <div className="inline-flex rounded-md border border-slate-200 bg-white px-2 py-[.3em] font-mono text-sm">
                 {user?.given_name}
               </div>
             </div>
             <div className="flex w-full items-center justify-start gap-2">
-              <div className="inline-flex rounded-md bg-purple-200 px-2 py-[.3em] font-mono text-sm text-purple-700">
+              <div className="inline-flex rounded-md border border-slate-300 bg-slate-100 px-2 py-[.3em] font-mono text-sm text-black">
                 family_name
               </div>
-              <div className="inline-flex rounded-md border-slate-200 bg-slate-100 px-2 py-[.3em] font-mono text-sm">
+              <div className="inline-flex rounded-md border border-slate-200 bg-white px-2 py-[.3em] font-mono text-sm">
                 {user?.family_name}
               </div>
             </div>
@@ -113,6 +113,7 @@ export default async function Dashboard() {
               <ul className="flex flex-col gap-3">
                 {topic.content?.map((content) => (
                   <li key={content.link} className="inline-flex">
+                    {console.log(content.link)}
                     <a
                       className="rounded-lg border border-slate-100 bg-white px-3 py-2 transition hover:border-black hover:bg-black hover:text-white"
                       href={content.link}
